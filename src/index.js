@@ -1,11 +1,13 @@
 const express = require('express');
 const server = express();
 
-require('dotenv').config();
+const usersRouter = require('./users/users-router');
 
+require('dotenv').config();
 const PORT = process.env.PORT;
 
 server.use(express.json());
+server.use('/api/users', usersRouter);
 
 server.listen(PORT, () => {
     console.log(`listening on port ${PORT}`);
