@@ -1,6 +1,6 @@
 module.exports = {
     get,
-    insert,
+    insert
 };
 
 function get() {
